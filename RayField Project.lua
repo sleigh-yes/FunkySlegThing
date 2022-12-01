@@ -112,7 +112,7 @@ local Button = Tab:CreateButton({
                 "MinSpread"
             }
 
-            local infvalues = {"AmmoCapacity", "AmmoReserves", "FullMagazineSize", "HitDamage", "MaxDistance"}
+            local infvalues = {"HitDamage", "MaxDistance"}
 
             for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                 if table.find(guns, v.Name) ~= nil then
@@ -260,3 +260,158 @@ local Input = Tab:CreateInput({
             end
 	end,
 })
+
+local Tab = Window:CreateTab("Morph Control", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Main Body Control")
+
+local Button = Tab:CreateButton({
+	Name = "Remove All Morph Parts",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" then 
+		        v:ClearAllChildren()
+	        end
+        end
+	end,
+})
+
+
+local Button = Tab:CreateButton({
+	Name = "Remove Head Morph",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "Head" then 
+		        v:ClearAllChildren()
+	        end
+        end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Remove Torso Morph",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LowerTorso" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "UpperTorso" then 
+		        v:ClearAllChildren()
+	        end
+        end
+	end,
+})
+
+local Section = Tab:CreateSection("Arm Morph Control")
+
+local Button = Tab:CreateButton({
+	Name = "Remove Right Arm Morph",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "RightHand" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "RightLowerArm" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "RightUpperArm" then 
+		        v:ClearAllChildren()
+	        end
+        end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Remove Left Arm Morph",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LeftHand" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LeftLowerArm" then 
+		        v:ClearAllChildren()
+	        end
+        end
+        
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LeftUpperArm" then 
+		        v:ClearAllChildren()
+	        end
+        end
+    end,
+})
+
+local Section = Tab:CreateSection("Leg Morph Control")
+
+local Button = Tab:CreateButton({
+	Name = "Remove Right Leg Morph",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "RightFoot" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "RightLowerLeg" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "RightUpperLeg" then 
+		        v:ClearAllChildren()
+	        end
+        end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Remove Left Leg Morph",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character
+        local childs = model:GetDescendants()
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LeftFoot" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LeftUpperLeg" then 
+		        v:ClearAllChildren()
+	        end
+        end
+
+        for I,v in pairs(childs) do 
+	        if v:IsA("Model") and v.Name == "MorphParts" and v.Parent.Name == "LeftLowerLeg" then 
+		        v:ClearAllChildren()
+	        end
+        end
+	end,
+})
+
