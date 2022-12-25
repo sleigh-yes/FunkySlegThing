@@ -62,7 +62,7 @@ local Window = Rayfield:CreateWindow({
         	Invite = "N/A", -- The Discord invite code, do not include discord.gg/
         	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
         },
-	KeySystem = true, -- Set this to true to use our key system
+	KeySystem = false, -- Set this to true to use our key system
 	KeySettings = {
 		Title = "Sleg Protection System",
 		Subtitle = "Key System",
@@ -262,6 +262,21 @@ local Input = Tab:CreateInput({
 })
 
 local Tab = Window:CreateTab("Morph Control", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+	Name = "Remove Tag",
+	Callback = function()
+		local model = game.Players.LocalPlayer.Character.HumanoidRootPart.MainNametag
+        local childs = model:GetDescendants()
+        model.Frame.Plaque:Destroy()
+            for I,v in pairs(childs) do 
+	            if v:IsA("TextLabel") and v.Name ~= "PlayerAuthority" then 
+		            v:Destroy()
+        	end
+        end
+	end,
+})
+
 
 local Section = Tab:CreateSection("Main Body Control")
 
