@@ -1,5 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
+--Looking at what im doing ey?
+
 guns = {
    "Imaginary Gun",
    "USP",
@@ -62,7 +64,7 @@ local Window = Rayfield:CreateWindow({
         	Invite = "N/A", -- The Discord invite code, do not include discord.gg/
         	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
         },
-	KeySystem = false, -- Set this to true to use our key system
+	KeySystem = true, -- Set this to true to use our key system
 	KeySettings = {
 		Title = "Sleg Protection System",
 		Subtitle = "Key System",
@@ -428,5 +430,119 @@ local Button = Tab:CreateButton({
 	        end
         end
 	end,
+})
+
+local Tab = Window:CreateTab("Fast Tool Grabber", 4483362458) -- Title, Image
+
+local Paragraph = Tab:CreateParagraph({Title = "For this to work:", Content = "Open :tools then close it for this to work. Only need to do this once"})
+
+local Section = Tab:CreateSection("Tools")
+
+local Button = Tab:CreateButton({
+	Name = "Get Level 99 Keycard",
+	Callback = function()
+	    local args = {
+        [1] = 6
+    }
+
+    local model = game:GetService("JointsService")
+    local childs = model:GetDescendants()
+
+    for I,v in pairs(childs) do 
+	    if v:IsA("RemoteEvent") and v.Name == "GetTool" then 
+		    v:FireServer(unpack(args))
+	    end
+    end
+	end
+})
+
+local Button = Tab:CreateButton({
+	Name = "Get Moderator Shotgun",
+	Callback = function()
+	    local args = {
+        [1] = 1
+    }
+
+    local model = game:GetService("JointsService")
+    local childs = model:GetDescendants()
+
+    for I,v in pairs(childs) do 
+	    if v:IsA("RemoteEvent") and v.Name == "GetTool" then 
+		    v:FireServer(unpack(args))
+	    end
+    end
+	end
+})
+
+local Button = Tab:CreateButton({
+	Name = "Get Binoculars",
+	Callback = function()
+	    local args = {
+        [1] = 5
+    }
+
+    local model = game:GetService("JointsService")
+    local childs = model:GetDescendants()
+
+    for I,v in pairs(childs) do 
+	    if v:IsA("RemoteEvent") and v.Name == "GetTool" then 
+		    v:FireServer(unpack(args))
+	    end
+    end
+	end
+})
+
+local Button = Tab:CreateButton({
+	Name = "Get Virus Kit",
+	Callback = function()
+	    local args = {
+        [1] = 4
+    }
+
+    local model = game:GetService("JointsService")
+    local childs = model:GetDescendants()
+
+    for I,v in pairs(childs) do 
+	    if v:IsA("RemoteEvent") and v.Name == "GetTool" then 
+		    v:FireServer(unpack(args))
+	    end
+    end
+	end
+})
+
+local Button = Tab:CreateButton({
+	Name = "Get System Repair Kit",
+	Callback = function()
+	    local args = {
+        [1] = 3
+    }
+
+    local model = game:GetService("JointsService")
+    local childs = model:GetDescendants()
+
+    for I,v in pairs(childs) do 
+	    if v:IsA("RemoteEvent") and v.Name == "GetTool" then 
+		    v:FireServer(unpack(args))
+	    end
+    end
+	end
+})
+
+local Button = Tab:CreateButton({
+	Name = "Get Maglight",
+	Callback = function()
+	    local args = {
+        [1] = 2
+    }
+
+    local model = game:GetService("JointsService")
+    local childs = model:GetDescendants()
+
+    for I,v in pairs(childs) do 
+	    if v:IsA("RemoteEvent") and v.Name == "GetTool" then 
+		    v:FireServer(unpack(args))
+	    end
+    end
+	end
 })
 
