@@ -1,7 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
---Looking at what im doing ey?
-
 guns = {
    "Imaginary Gun",
    "USP",
@@ -64,7 +62,7 @@ local Window = Rayfield:CreateWindow({
         	Invite = "N/A", -- The Discord invite code, do not include discord.gg/
         	RememberJoins = true -- Set this to false to make them join the discord every time they load it up
         },
-	KeySystem = false, -- Set this to true to use our key system
+	KeySystem = true, -- Set this to true to use our key system
 	KeySettings = {
 		Title = "Sleg Protection System",
 		Subtitle = "Key System",
@@ -546,3 +544,404 @@ local Button = Tab:CreateButton({
 	end
 })
 
+local Tab = Window:CreateTab("Teleport to Places", 4483362458) -- Title, Image
+
+local PlayerS = game:GetService("Players")
+local char = PlayerS.LocalPlayer.Character
+
+function getRoot(char)
+	local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+	return rootPart
+end
+
+local Section = Tab:CreateSection("Facility")
+
+local Button = Tab:CreateButton({
+	Name = "Launch Control",
+	Callback = function()
+		local tpX,tpY,tpZ = 684, 374, -416
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Launch Control Roof",
+	Callback = function()
+		local tpX,tpY,tpZ = 610, 445, -425
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Ground Zero",
+	Callback = function()
+		local tpX,tpY,tpZ = -333, 241, -377
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Core Control",
+	Callback = function()
+		local tpX,tpY,tpZ = 1104, 298, 1092
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Power Center",
+	Callback = function()
+		local tpX,tpY,tpZ = 1281, 334, 111
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Data Center",
+	Callback = function()
+		local tpX,tpY,tpZ = 1340, 334, -345
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Cafeteria",
+	Callback = function()
+		local tpX,tpY,tpZ = 1055, 334, -422
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Hospital",
+	Callback = function()
+		local tpX,tpY,tpZ = 1096, 334, -689
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Barracks",
+	Callback = function()
+		local tpX,tpY,tpZ = 745, 371, -90
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Receiving Center",
+	Callback = function()
+		local tpX,tpY,tpZ = 745, 371, -90
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Maintenance Offices",
+	Callback = function()
+		local tpX,tpY,tpZ = 1663, 334, -423
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Logistics Checkpoint",
+	Callback = function()
+		local tpX,tpY,tpZ = 1415, 334, -2477
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Section = Tab:CreateSection("Executive Area")
+
+local Button = Tab:CreateButton({
+	Name = "Armory (Council)",
+	Callback = function()
+		local tpX,tpY,tpZ = 775, 334, -804
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Armory (Director)",
+	Callback = function()
+		local tpX,tpY,tpZ = 775, 334, -804
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Garage",
+	Callback = function()
+		local tpX,tpY,tpZ = 813, 334, -742
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Executive Offices",
+	Callback = function()
+		local tpX,tpY,tpZ = 736, 381, -759
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Brodcasting Room",
+	Callback = function()
+		local tpX,tpY,tpZ = 721, 381, -690
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Master Teleport Room",
+	Callback = function()
+		local tpX,tpY,tpZ = 1161, 19, -713
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Emergency Elevator",
+	Callback = function()
+		local tpX,tpY,tpZ = 1099, 422, -824
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Section = Tab:CreateSection("Security")
+
+local Button = Tab:CreateButton({
+	Name = "Internal Checkpoint",
+	Callback = function()
+		local tpX,tpY,tpZ = 1329, 334, -894
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "External Checkpoint",
+	Callback = function()
+		local tpX,tpY,tpZ = 1367, 334, -1305
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Security Offices",
+	Callback = function()
+		local tpX,tpY,tpZ = 1338, 398, -641
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "External Gate",
+	Callback = function()
+		local tpX,tpY,tpZ = 1484, 334, -1328
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Internal Gate",
+	Callback = function()
+		local tpX,tpY,tpZ = 1484, 334, -857
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Internal Gate Mk2",
+	Callback = function()
+		local tpX,tpY,tpZ = 981, 334, -979
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Section = Tab:CreateSection("Watchtowers")
+
+local Button = Tab:CreateButton({
+	Name = "Watchtower 1",
+	Callback = function()
+		local tpX,tpY,tpZ = 1685, 370, -1067
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Watchtower 2",
+	Callback = function()
+		local tpX,tpY,tpZ = 788, 375, -1410
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Watchtower 3",
+	Callback = function()
+		local tpX,tpY,tpZ = 517, 370, -931
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Watchtower 4",
+	Callback = function()
+		local tpX,tpY,tpZ = 227, 370, 438
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Watchtower 5",
+	Callback = function()
+		local tpX,tpY,tpZ = 1381, 411, -1272
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Watchtower 6",
+	Callback = function()
+		local tpX,tpY,tpZ = 1005, 360, -7
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Section = Tab:CreateSection("Other Things")
+
+local Button = Tab:CreateButton({
+	Name = "Thanks for Playing",
+	Callback = function()
+		local tpX,tpY,tpZ = 227, 370, 438
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Old Bunker Teleported Room",
+	Callback = function()
+		local tpX,tpY,tpZ = -640, 334, 732
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Top of the Connection Tower",
+	Callback = function()
+		local tpX,tpY,tpZ = 1338, 570, -333
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Tower?",
+	Callback = function()
+		local tpX,tpY,tpZ = 1670, 379, -678
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Section = Tab:CreateSection("Rebellion")
+
+local Button = Tab:CreateButton({
+	Name = "Gas Station",
+	Callback = function()
+		local tpX,tpY,tpZ = 963, 359, -2795
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Pirate Brodcast",
+	Callback = function()
+		local tpX,tpY,tpZ = 968, 409, -2824
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Underground Gas Station",
+	Callback = function()
+		local tpX,tpY,tpZ = 1011, 325, -2830
+            if char and getRoot(char) then
+                getRoot(char).CFrame = CFrame.new(tpX,tpY,tpZ)
+            end
+	end,
+})
